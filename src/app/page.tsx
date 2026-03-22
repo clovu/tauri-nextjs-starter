@@ -93,7 +93,7 @@ export default function Home() {
             }}
           />
           <div className="flex grow w-full justify-center items-center">
-            <Conter />
+            <Counter />
           </div>
         </Allotment.Pane>
       </Allotment>
@@ -102,7 +102,7 @@ export default function Home() {
   </>
 }
 
-function Conter() {
+function Counter() {
   const [language] = useLangStore()
   return (
     <p className="text-xs text-secondary-foreground whitespace-pre-wrap">

@@ -15,6 +15,7 @@ export default defineConfig({
     '.next/**',
     '.nuxt/**',
     '.output/**',
+    'out/**',
     '.turbo/**',
     '.cache/**',
     '.agents/**',

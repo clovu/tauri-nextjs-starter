@@ -9,8 +9,11 @@ pub trait WebviewWindowExt {
 impl<R: tauri::Runtime> WebviewWindowExt for WebviewWindow<R> {
     #[cfg(target_os = "macos")]
     fn to_native_window(&self) {
-        use objc2::{MainThreadMarker, MainThreadOnly, rc::Retained};
-        use objc2_app_kit::{NSToolbar, NSWindow};
+        use objc2::MainThreadMarker;
+        use objc2::MainThreadOnly;
+        use objc2::rc::Retained;
+        use objc2_app_kit::NSToolbar;
+        use objc2_app_kit::NSWindow;
 
         let ns_window = match self
             .ns_window()
@@ -22,14 +25,12 @@ impl<R: tauri::Runtime> WebviewWindowExt for WebviewWindow<R> {
             None => return,
         };
 
-        unsafe {
-            if let Some(mtm) = MainThreadMarker::new() {
-                let ns_toolbar = NSToolbar::init(NSToolbar::alloc(mtm));
-                ns_window.setToolbar(Some(&ns_toolbar));
-            }
-
-            use objc2_app_kit::NSWindowToolbarStyle;
-            ns_window.setToolbarStyle(NSWindowToolbarStyle::Automatic);
+        if let Some(mtm) = MainThreadMarker::new() {
+            let ns_toolbar = NSToolbar::init(NSToolbar::alloc(mtm));
+            ns_window.setToolbar(Some(&ns_toolbar));
         }
+
+        use objc2_app_kit::NSWindowToolbarStyle;
+        ns_window.setToolbarStyle(NSWindowToolbarStyle::Automatic);
     }
 }

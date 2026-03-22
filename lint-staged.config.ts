@@ -1,7 +1,9 @@
 import path from 'node:path'
 
-function createCommand(prefix, join) {
-  return (filenames) =>
+import type { Configuration } from 'lint-staged'
+
+function createCommand(prefix: string, join: string) {
+  return (filenames: readonly string[]) =>
     `${prefix} ${filenames.map((f) => path.relative(process.cwd(), f)).join(`${join} `)}`
 }
 
@@ -19,4 +21,4 @@ export default {
     // Lint rust sources.
     () => 'cargo clippy --manifest-path ./src-tauri/Cargo.toml --all-targets --all-features --tests --benches -- -D warnings',
   ],
-}
+} satisfies Configuration

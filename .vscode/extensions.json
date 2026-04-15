@@ -4,6 +4,7 @@
     "rust-lang.rust-analyzer",
     "usernamehw.errorlens",
     "dbaeumer.vscode-eslint",
-    "streetsidesoftware.code-spell-checker"
+    "streetsidesoftware.code-spell-checker",
+    "bradlc.vscode-tailwindcss"
   ]
 }

@@ -1,8 +1,11 @@
 [package]
-authors = ["Clover You"]
+authors = ["Clover You <hi@clovu.me>"]
 description = "A Tauri App template with NextJS"
 edition = "2024"
+license-file = "../LICENSE"
 name = "rust-tauri-nextjs-template"
+readme = "../README.md"
+repository = "https://github.com/clovu/tauri-nextjs-starter"
 version = "0.1.0"
 
 [profile.release]

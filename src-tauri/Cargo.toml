@@ -1,35 +1,35 @@
 [package]
+authors = ["Clover You"]
+description = "A Tauri App template with NextJS"
+edition = "2024"
 name = "rust-tauri-nextjs-template"
 version = "0.1.0"
-description = "A Tauri App template with NextJS"
-authors = ["Clover You"]
-edition = "2024"
 
 [profile.release]
-opt-level = 3
-lto = true
-debug = false
 codegen-units = 1
+debug = false
+lto = true
+opt-level = 3
 
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
 [lib]
-name = "rust_tauri_nextjs_template_lib"
 crate-type = ["staticlib", "cdylib", "rlib"]
+name = "rust_tauri_nextjs_template_lib"
 
 [build-dependencies]
-tauri-build = { version = "2.4.0", features = [] }
+tauri-build = { version = "2.5.6", features = [] }
 
 [dependencies]
-tauri = { version = "2.8.1", features = [] }
-tauri-plugin-shell = "2.3.0"
-serde = { version = "1", features = ["derive"] }
-serde_json = "1"
+anyhow = "1.0.102"
+serde = { version = "1.0.228", features = ["derive"] }
+serde_json = "1.0.149"
 sqlx = { version = "0.8.6", features = ["runtime-tokio-native-tls", "sqlite"] }
-tokio = { version = "1.47.1", features = ["tokio-macros", "macros"] }
-anyhow = "1.0.99"
-tauri-utils = "2.7.0"
+tauri = { version = "2.8.1", features = [] }
+tauri-plugin-shell = "2.3.5"
+tauri-utils = "2.8.3"
+tokio = { version = "1.52.0", features = ["tokio-macros", "macros"] }
 
 [target."cfg(target_os = \"macos\")".dependencies]
-objc2 = "0.6.2"
-objc2-app-kit = "0.3.1"
+objc2 = "0.6.4"
+objc2-app-kit = "0.3.2"

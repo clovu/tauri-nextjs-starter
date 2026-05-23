@@ -39,7 +39,7 @@ jobs:
           version: 9.14.2
 
       - name: Set node version to LTS
-        uses: actions/setup-node@v2
+        uses: actions/setup-node@v6
         with:
           node-version: 22
           cache: 'pnpm'

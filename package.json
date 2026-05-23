@@ -80,7 +80,7 @@
     "eslint-plugin-react": "^7.37.5",
     "eslint-plugin-react-compiler": "19.1.0-rc.2",
     "globals": "^17.5.0",
-    "lint-staged": "^16.4.0",
+    "lint-staged": "^17.0.5",
     "pnpm": "^10.33.0",
     "postcss": "^8.5.9",
     "react-compiler-healthcheck": "19.1.0-rc.2",

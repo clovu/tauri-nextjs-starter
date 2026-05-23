@@ -7,6 +7,7 @@ use std::{error, fs, ops::Add, sync::Mutex};
 use serde::{Deserialize, Serialize};
 use sqlx::{Pool, Sqlite, migrate::MigrateDatabase};
 use tauri::Manager;
+#[cfg(target_os = "macos")]
 use utils::window::WebviewWindowExt;
 
 mod manager;

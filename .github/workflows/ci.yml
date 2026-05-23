@@ -24,7 +24,7 @@ jobs:
     runs-on: ${{ matrix.settings.platform }}
 
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v6
       - name: Add Rust targets(macOS Intel)
         if: matrix.settings.target == 'macos-intel'
         run: rustup target add x86_64-apple-darwin
@@ -34,12 +34,12 @@ jobs:
         run: rustup target add aarch64-apple-darwin
 
       - name: Install pnpm
-        uses: pnpm/action-setup@v2
+        uses: pnpm/action-setup@v6
         with:
           version: 9.14.2
 
       - name: Set node version to LTS
-        uses: actions/setup-node@v2
+        uses: actions/setup-node@v6
         with:
           node-version: 22
           cache: 'pnpm'

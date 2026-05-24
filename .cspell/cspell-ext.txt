@@ -4,6 +4,7 @@ clippy
 clovu
 codegen
 ctong
+esbuild
 healthcheck
 iconify
 nextjs

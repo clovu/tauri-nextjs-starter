@@ -7,6 +7,7 @@ use std::{error, fs, ops::Add, sync::Mutex};
 use serde::{Deserialize, Serialize};
 use sqlx::{Pool, Sqlite, migrate::MigrateDatabase};
 use tauri::Manager;
+#[cfg(target_os = "macos")]
 use utils::window::WebviewWindowExt;
 
 mod manager;
@@ -78,7 +79,7 @@ async fn update_task_by_id(
 ) -> Result<(), Box<dyn error::Error>> {
     let db = create_db().await.context("failed to create db")?;
 
-    let task_raw: Task = sqlx::query_as("select * from task where id = {}")
+    let task_raw: Task = sqlx::query_as("select * from task where id = ?")
         .bind(id)
         .fetch_one(&db)
         .await
@@ -101,12 +102,11 @@ async fn update_task_by_id(
 async fn add_task_to_db(name: String, status: i32) -> Result<(), Box<dyn error::Error>> {
     let db = create_db().await?;
 
-    let sql = format!(
-        "insert into task(name, status) values('{}', {})",
-        name, status
-    );
-
-    sqlx::query(sql.as_str()).execute(&db).await?;
+    sqlx::query("insert into task(name, status) values(?, ?)")
+        .bind(name)
+        .bind(status)
+        .execute(&db)
+        .await?;
 
     Ok(())
 }

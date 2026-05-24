@@ -1,3 +1,5 @@
+#![cfg(target_os = "macos")]
+
 use tauri::WebviewWindow;
 
 pub trait WebviewWindowExt {

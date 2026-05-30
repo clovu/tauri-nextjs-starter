@@ -82,7 +82,7 @@
     "globals": "^17.5.0",
     "lint-staged": "^17.0.5",
     "pnpm": "^10.33.0",
-    "postcss": "^8.5.9",
+    "postcss": "^8.5.15",
     "react-compiler-healthcheck": "19.1.0-rc.2",
     "tailwindcss": "^4.2.2",
     "typescript": "^6.0.2",

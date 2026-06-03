@@ -70,7 +70,7 @@
     "@iconify/tailwind4": "^1.2.3",
     "@next/swc-darwin-x64": "16.2.3",
     "@tailwindcss/postcss": "^4.2.2",
-    "@tauri-apps/cli": "2.10.1",
+    "@tauri-apps/cli": "2.11.2",
     "@types/node": "^25.6.0",
     "@types/react": "^19.2.14",
     "@types/react-dom": "^19.2.3",

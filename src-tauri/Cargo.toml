@@ -21,14 +21,18 @@ crate-type = ["staticlib", "cdylib", "rlib"]
 name = "rust_tauri_nextjs_template_lib"
 
 [build-dependencies]
-tauri-build = { version = "2.5.6", features = [] }
+tauri-build = { version = "2", features = [] }
 
 [dependencies]
 anyhow = "1.0.102"
 serde = { version = "1.0.228", features = ["derive"] }
 serde_json = "1.0.149"
-sqlx = { version = "0.9.0", features = ["runtime-tokio", "tls-native-tls", "sqlite"] }
-tauri = { version = "2.10.3", features = [] }
+sqlx = { version = "0.9.0", features = [
+  "runtime-tokio",
+  "tls-native-tls",
+  "sqlite",
+] }
+tauri = { version = "2", features = [] }
 tauri-plugin-shell = "2.3.5"
 tauri-utils = "2.8.3"
 tokio = { version = "1.52.0", features = ["tokio-macros", "macros"] }

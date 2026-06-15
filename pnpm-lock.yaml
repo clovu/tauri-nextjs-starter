@@ -73,7 +73,7 @@ importers:
         version: 3.6.0
       tailwindcss-animate:
         specifier: ^1.0.7
-        version: 1.0.7(tailwindcss@4.3.0)
+        version: 1.0.7(tailwindcss@4.3.1)
     devDependencies:
       '@cspell/dict-lorem-ipsum':
         specifier: ^4.0.5
@@ -86,7 +86,7 @@ importers:
         version: 10.0.1(eslint@10.5.0(jiti@2.6.1))
       '@iconify/tailwind4':
         specifier: ^1.2.3
-        version: 1.2.3(tailwindcss@4.3.0)
+        version: 1.2.3(tailwindcss@4.3.1)
       '@tailwindcss/postcss':
         specifier: ^4.2.2
         version: 4.2.2
@@ -133,8 +133,8 @@ importers:
         specifier: 1.0.0
         version: 1.0.0
       tailwindcss:
-        specifier: ^4.3.0
-        version: 4.3.0
+        specifier: ^4.3.1
+        version: 4.3.1
       typescript:
         specifier: ^6.0.3
         version: 6.0.3
@@ -3409,8 +3409,8 @@ packages:
   tailwindcss@4.2.2:
     resolution: {integrity: sha512-KWBIxs1Xb6NoLdMVqhbhgwZf2PGBpPEiwOqgI4pFIYbNTfBXiKYyWoTsXgBQ9WFg/OlhnvHaY+AEpW7wSmFo2Q==}
 
-  tailwindcss@4.3.0:
-    resolution: {integrity: sha512-y6nxMGB1nMW9R6k96e5gdIFzcfL/gTJRNaqGes1YvkLnPVXzWgbqFF2yLC0T8G774n24cx3Pe8XrKoniCOAH+Q==}
+  tailwindcss@4.3.1:
+    resolution: {integrity: sha512-hk+TB1m+K8CYNrP6rjQaq/Y+4Zylwpa87mLYBKCunwnnQ9p+fHb7kmSfGqyEJoxF/O6CDyABWVFEafNSYKll+Q==}
 
   tapable@2.3.2:
     resolution: {integrity: sha512-1MOpMXuhGzGL5TTCZFItxCc0AARf1EZFQkGqMm7ERKj8+Hgr5oLvJOVFcC+lRmR8hCe2S3jC4T5D7Vg/d7/fhA==}
@@ -4470,12 +4470,12 @@ snapshots:
     dependencies:
       '@iconify/types': 2.0.0
 
-  '@iconify/tailwind4@1.2.3(tailwindcss@4.3.0)':
+  '@iconify/tailwind4@1.2.3(tailwindcss@4.3.1)':
     dependencies:
       '@iconify/tools': 5.0.11
       '@iconify/types': 2.0.0
       '@iconify/utils': 3.1.0
-      tailwindcss: 4.3.0
+      tailwindcss: 4.3.1
 
   '@iconify/tools@5.0.11':
     dependencies:
@@ -7114,13 +7114,13 @@ snapshots:
 
   tailwind-merge@3.6.0: {}
 
-  tailwindcss-animate@1.0.7(tailwindcss@4.3.0):
+  tailwindcss-animate@1.0.7(tailwindcss@4.3.1):
     dependencies:
-      tailwindcss: 4.3.0
+      tailwindcss: 4.3.1
 
   tailwindcss@4.2.2: {}
 
-  tailwindcss@4.3.0: {}
+  tailwindcss@4.3.1: {}
 
   tapable@2.3.2: {}
 

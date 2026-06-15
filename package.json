@@ -32,12 +32,10 @@
     "tauri": "tauri",
     "preinstall": "npx only-allow pnpm",
     "test": "vitest",
-    "prepare": "husky",
-    "up": "pnpm update --interactive --recursive --latest"
+    "prepare": "husky"
   },
   "engines": {
-    "node": ">=18",
-    "pnpm": ">=9"
+    "node": ">=23"
   },
   "dependencies": {
     "@iconify-json/carbon": "^1.2.23",
@@ -80,7 +78,6 @@
     "eslint-plugin-react-compiler": "19.1.0-rc.2",
     "globals": "^17.6.0",
     "lint-staged": "^17.0.7",
-    "pnpm": "^10.33.0",
     "postcss": "^8.5.15",
     "postcss-load-config": "^6.0.1",
     "react-compiler-healthcheck": "1.0.0",
